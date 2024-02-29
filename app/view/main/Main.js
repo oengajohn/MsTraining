@@ -75,13 +75,6 @@ Ext.define('MsTraining.view.main.Main', {
     },
 
     items: [{
-        title: 'Home',
-        iconCls: 'fa-home',
-        // The following grid shares a store with the classic version's grid as well!
-        items: [{
-            xtype: 'mainlist'
-        }]
-    }, {
         title: 'Posts',
         iconCls: 'fa-user',
         items: [
@@ -89,21 +82,27 @@ Ext.define('MsTraining.view.main.Main', {
                 xtype: 'postgrid'
             }
         ]
-    }, {
+    },
+    {
+        title: 'Home',
+        iconCls: 'fa-home',
+        // The following grid shares a store with the classic version's grid as well!
+        items: [{
+            xtype: 'mainlist'
+        }]
+    },
+    {
         title: 'Groups',
         iconCls: 'fa-users',
         items: [
-            {
-                xtype: 'postgrid'
-            }
+
         ]
-    }, {
+    },
+    {
         title: 'Settings',
         iconCls: 'fa-cog',
         items: [
-            {
-                xtype: 'postgrid'
-            }
+
         ]
     }]
 });
