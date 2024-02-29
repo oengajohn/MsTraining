@@ -92,14 +92,18 @@ Ext.define('MsTraining.view.main.Main', {
     }, {
         title: 'Groups',
         iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        items: [
+            {
+                xtype: 'postgrid'
+            }
+        ]
     }, {
         title: 'Settings',
         iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
+        items: [
+            {
+                xtype: 'postgrid'
+            }
+        ]
     }]
 });
