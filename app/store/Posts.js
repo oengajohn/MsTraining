@@ -5,8 +5,8 @@ Ext.define('MsTraining.store.Posts',{
     requires: ['MsTraining.model.Post'],
     autoLoad:true,
     sorters: ['id', 'title'],
-    filters: {
+    /* filters: {
         property: 'userId',
         value: '10'
-    }
+    } */
 })
