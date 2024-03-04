@@ -15,6 +15,7 @@ Ext.define('MsTraining.view.posts.PostFormWindow', {
         jsonSubmit:true,
         bodyPadding: 10,
         modelValidation: true,
+        layout: 'form',
         items: [
             {
                 allowBlank: true,

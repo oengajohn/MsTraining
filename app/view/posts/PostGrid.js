@@ -16,6 +16,12 @@ Ext.define('MsTraining.view.posts.PostGrid', {
         listeners: {
             click: 'onFormFieldsClicked'
         }
+    },
+    {
+        text: 'Layouts',
+        listeners: {
+            click: 'onLayoutsClicked'
+        }
     }],
     columns: [
         { dataIndex: 'id', text: 'ID' },
