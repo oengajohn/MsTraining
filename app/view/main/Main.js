@@ -75,6 +75,14 @@ Ext.define('MsTraining.view.main.Main', {
     },
 
     items: [{
+        title: 'Static Data Management',
+        iconCls: 'fa-users',
+        items: [
+            {
+                xtype: 'parentpanel'
+            }
+        ]
+    }, {
         title: 'Posts',
         iconCls: 'fa-user',
         items: [

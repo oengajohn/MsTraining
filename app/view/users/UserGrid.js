@@ -32,7 +32,10 @@ Ext.define('MsTraining.view.users.UserGrid',{
         {
             text: 'Add User'
         },
-        '->',
+        // '->',
+        {
+            xtype:'tbfill'
+        },
         {
           text:'Show Details',
           handler:'onShowDetails'  
