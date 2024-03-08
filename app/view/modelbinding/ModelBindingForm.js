@@ -59,7 +59,12 @@ Ext.define('MsTraining.view.modelbinding.ModelBindingForm', {
                 minChars: 0,
                 queryMode: 'local',
                 typeAhead: true,
-                valueField:'abbr'
+                valueField:'abbr',
+                
+                listeners:{
+                    select:'onStateSelected',
+                    change:'onStateSelectionChange'
+                }
             },
             
             ]

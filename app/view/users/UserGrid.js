@@ -8,7 +8,16 @@ Ext.define('MsTraining.view.users.UserGrid', {
         type: 'users'
     },
     height: 1200,
+    plugins: {
+        cellediting: {
+            clicksToEdit: 1
+        }
+    },
+    selModel: {
+        selType: 'cellmodel',
+    },
     columns: [
+            {xtype: 'rownumberer'},
         {
             dataIndex: '_id',
             text: 'ID'
@@ -17,11 +26,20 @@ Ext.define('MsTraining.view.users.UserGrid', {
             dataIndex: 'username',
             text: 'Username',
             flex: 2,
+            editor: 'textfield'
         },
         {
             dataIndex: 'email',
             text: 'Email',
-            flex: 3
+            flex: 3,
+            renderer: function (value) {
+                return Ext.String.format('<a href="mailto:{0}">{1}</a>', value, value);
+            },
+            editor: {
+                xtype: 'textfield',
+                completeOnEnter: false,
+                allowBlank: false
+            }
         },
         {
             dataIndex: 'city',
@@ -49,16 +67,15 @@ Ext.define('MsTraining.view.users.UserGrid', {
             }
         }
     ],
-    selModel: {
-        selType: 'checkboxmodel',
-        mode: 'SINGLE'
-    },
+   
     bbar: {
         xtype: 'pagingtoolbar',
         displayInfo: true
     },
     listeners: {
-        cellclick: 'onUserGridCellClick'
+        cellclick: 'onUserGridCellClick',
+        celldblclick:'onUserGridCellDblClick',
+        cellcontextmenu:'onUserGridCellContextMenu'
     }
 
 })
