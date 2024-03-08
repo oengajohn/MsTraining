@@ -32,5 +32,10 @@ Ext.define('MsTraining.view.users.UserGridController', {
             lowerPanel.setHeight(0)
             btn.setText("Show Details")
         }
+    },
+    onModelBinding:function(btn,e,eOpts){
+        Ext.create({
+            xtype:'modelbindingform'
+        })
     }
 })

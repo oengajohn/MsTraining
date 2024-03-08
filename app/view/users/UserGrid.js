@@ -1,44 +1,52 @@
-Ext.define('MsTraining.view.users.UserGrid',{
-    extend:'Ext.grid.GridPanel',
-    xtype:'usergrid',
-    controller:'usergridcontroller',
-    title:'Users',
-    store:{
-        type:'users'
+Ext.define('MsTraining.view.users.UserGrid', {
+    extend: 'Ext.grid.GridPanel',
+    xtype: 'usergrid',
+    reference:'usergrid',
+    controller: 'usergridcontroller',
+    title: 'Users',
+    store: {
+        type: 'users'
     },
-    height:1200,
-    columns:[
+    height: 1200,
+    columns: [
         {
-            dataIndex:'_id',
+            dataIndex: '_id',
             text: 'ID'
         },
         {
             dataIndex: 'username',
             text: 'Username',
-            flex:2,
+            flex: 2,
         },
         {
             dataIndex: 'email',
             text: 'Email',
-            flex:3
+            flex: 3
         },
         {
             dataIndex: 'city',
             text: 'City',
-            flex:2
+            flex: 2
         }
     ],
-    tbar:[
+    tbar: [
         {
             text: 'Add User'
         },
+        {
+            text: 'Model Binding',
+            handler: 'onModelBinding'
+        },
         // '->',
         {
-            xtype:'tbfill'
+            xtype: 'tbfill'
         },
         {
-          text:'Show Details',
-          handler:'onShowDetails'  
+            text: 'Show Details',
+            handler: 'onShowDetails',
+            bind: {
+                disabled: '{!usergrid.selection}'
+            }
         }
     ],
     selModel: {
@@ -49,8 +57,8 @@ Ext.define('MsTraining.view.users.UserGrid',{
         xtype: 'pagingtoolbar',
         displayInfo: true
     },
-    listeners:{
-        cellclick:'onUserGridCellClick'
+    listeners: {
+        cellclick: 'onUserGridCellClick'
     }
-   
+
 })

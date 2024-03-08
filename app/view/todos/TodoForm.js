@@ -61,7 +61,17 @@ Ext.define('MsTraining.view.todos.TodoForm', {
                         value: '{record.userId}'
                     }
 
-                }
+                },
+                {
+                    fieldLabel: 'Comments',
+                    xtype:'textarea',
+                    name: 'comments',
+                    bind: {
+                        hidden: '{!record.completed}'
+                    }
+
+                },
+             
             ],
             buttons: [
                 {
