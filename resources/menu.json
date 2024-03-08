@@ -1,0 +1,106 @@
+{
+  "success": true,
+  "message": "Menu items fetched successfully",
+  "data": [
+    {
+      "id": 1,
+      "items": [
+        {
+          "id": 2,
+          "text": "Groups and Permissions",
+          "iconCls": "fa fa-users",
+          "className": "panel",
+          "menuId": 1
+        },
+        {
+          "id": 3,
+          "text": "Users",
+          "iconCls": "fa fa-user",
+          "className": "panel",
+          "menuId": 1
+        }
+      ],
+      "text": "Security",
+      "iconCls": "fa fa-users",
+      "className": null,
+      "menuId": null
+    },
+    {
+      "id": 4,
+      "items": [
+        {
+          "id": 5,
+          "text": "Actors",
+          "iconCls": "fa fa-user",
+          "className": "panel",
+          "menuId": 4
+        },
+        {
+          "id": 6,
+          "text": "Categories",
+          "iconCls": "fa fa-user",
+          "className": "panel",
+          "menuId": 4
+        },
+        {
+          "id": 7,
+          "text": "Languages",
+          "iconCls": "fa fa-user",
+          "className": "panel",
+          "menuId": 4
+        },
+        {
+          "id": 8,
+          "text": "Cities",
+          "iconCls": "fa fa-user",
+          "className": "panel",
+          "menuId": 4
+        },
+        {
+          "id": 9,
+          "text": "Countries",
+          "iconCls": "fa fa-user",
+          "className": "panel",
+          "menuId": 4
+        }
+      ],
+      "text": "Static Data",
+      "iconCls": "fa fa-database fa-lg",
+      "className": null,
+      "menuId": null
+    },
+    {
+      "id": 10,
+      "items": [
+        {
+          "id": 11,
+          "text": "Films",
+          "iconCls": "fa fa-user",
+          "className": "panel",
+          "menuId": 10
+        }
+      ],
+      "text": "Content Management",
+      "iconCls": "fa fa-film fa-lg",
+      "className": null,
+      "menuId": null
+    },
+    {
+      "id": 12,
+      "items": [
+        {
+          "id": 13,
+          "text": "Sales by Film Category",
+          "iconCls": "fa fa-user",
+          "className": "panel",
+          "menuId": 12
+        }
+      ],
+      "text": "Reports",
+      "iconCls": "fa fa-line-chart fa-lg",
+      "className": null,
+      "menuId": null
+    }
+  ],
+  "total": 4
+}
