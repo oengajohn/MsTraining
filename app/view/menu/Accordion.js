@@ -4,7 +4,7 @@ Ext.define('MsTraining.view.menu.Accordion', {
     width: 250, 
     layout: {
         type: 'accordion', 
-        multi: false 
+        multi: true 
     },
     collapsible: true,
     split: true, 

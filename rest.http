@@ -1,0 +1,86 @@
+### Authenticat User
+# @name AuthenticatUser
+POST http://localhost:8080/api/authenticate
+Content-Type: application/json
+
+{
+  "username": "mhusika",
+  "password": "mhusika"
+}
+
+### Fetch User Menu
+# @name fetchUserMenu
+GET http://localhost:8080/api/menu/list?username=mhusika
+
+### Fetch Actors (Without Pagination)
+# @name fetchActorsWithoutPagination
+
+GET http://localhost:8080/api/actor/list
+
+### Fetch Actors (Without Pagination)
+# @name fetchActorsWithPagination
+
+GET http://localhost:8080/api/actor/searchActors?start=0&limit=10
+
+
+### Search Actors (With Pagination)
+# @name searchActorsWithPagination
+
+GET http://localhost:8080/api/actor/searchActors?start=0&limit=10&query=JOHN
+
+### Fetch Categories
+# @name fetchCategories
+GET http://localhost:8080/api/category/list
+
+
+### Fetch Countries
+# @name fetchCountries
+GET http://localhost:8080/api/country/list
+
+### Fetch Cities
+# @name fetchCities
+GET http://localhost:8080/api/city/list
+
+### Fetch Films
+# @name fetchFilms
+GET http://localhost:8080/api/film/list?start=0&limit=2
+
+### Search Films
+# @name searchFilms
+GET http://localhost:8080/api/film/searchFilms?start=0&limit=2&query=ACE
+
+
+### List Groups
+# @name listGroups
+GET http://localhost:8080/api/group/list
+
+
+### List Languages
+# @name listLanguages
+GET http://localhost:8080/api/language/list
+
+### List Users
+# @name listusers
+GET http://localhost:8080/api/user/list
+
+
+
+
+### List Create User
+# @name createUser
+POST http://localhost:8080/api/user/create
+Content-Type: application/json
+
+{
+    
+ 
+  "name": "John",
+  "username": "mhu",
+  "email": "mhusika@gmail.com",
+  "picture": "",
+  "groupId": 1  
+}
+
+
+
+

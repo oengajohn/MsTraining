@@ -4,7 +4,7 @@ Ext.define('MsTraining.model.menu.TreeNode',{
         { name: 'id', type: 'int' },
         { name: 'text' },
         { name: 'iconCls' },
-        { name: 'className' },
-        { name: 'parent_id', mapping: 'menu_id' } 
+        { name: 'xtype' },
+        { name: 'parent_id', mapping: 'menuId' } 
     ]
 })

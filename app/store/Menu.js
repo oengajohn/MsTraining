@@ -3,8 +3,8 @@ Ext.define('MsTraining.store.Menu',{
     alias:'store.menustore',
     model: 'MsTraining.model.menu.Accordion',
     proxy: {
-        type: 'ajax', 
-        url: '/resources/menu.json',
+        type: 'rest', 
+        url: 'http://localhost:8080/api/menu/list?username=mhusika',
         reader: { 
             type: 'json',
             rootProperty: 'data'

@@ -53,7 +53,7 @@ Ext.define('MsTraining.view.main.MainController', {
                         leaf: true,
                         iconCls: item.get('iconCls'),
                         id: item.get('id'),
-                        className: item.get('className')
+                        className: item.get('xtype')
                     });
                 }
                 menu.getRootNode().appendChild(nodes);
