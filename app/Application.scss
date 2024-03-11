@@ -3,3 +3,13 @@
  *  styling should be located the view's corresponding scss file.
  */
 $enable-font-awesome: dynamic(true);
+$mstraining-button-icon-color: #fff;
+$mstraining-tab-icon-color: rgb(11, 103, 196);
+
+.tabIcon {
+    color: $mstraining-tab-icon-color;
+}
+
+.buttonIcon {
+    color: $mstraining-button-icon-color;
+}
