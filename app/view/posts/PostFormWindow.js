@@ -27,6 +27,14 @@ Ext.define('MsTraining.view.posts.PostFormWindow', {
                 emptyText: 'Post id'
             },
             {
+                allowBlank: true,
+                xtype: 'datefield',
+                fieldLabel: 'DOB',
+                name: 'dateOfBirth',
+                emptyText: 'Date of Birth',
+                maxValue: Ext.Date.add(new Date(), Ext.Date.YEAR,-18)
+            },
+            {
                 allowBlank: false,
                 xtype: 'textfield',
                 fieldLabel: 'User ID',
