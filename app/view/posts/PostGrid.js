@@ -33,6 +33,12 @@ Ext.define('MsTraining.view.posts.PostGrid', {
             click: 'onFormFieldsClicked'
         }
     },
+     {
+        text: 'VTypes',
+        listeners: {
+            click: 'onVTypesClicked'
+        }
+    },
     {
         text: 'Layouts',
         listeners: {
