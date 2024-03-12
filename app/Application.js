@@ -30,9 +30,7 @@ Ext.define("MsTraining.Application", {
     var loggedIn;
     loggedIn = localStorage.getItem("MsAppLoggedIn");
     console.log(loggedIn);
-    // Ext.widget(loggedIn ? 'app-main' : 'login');
-    Ext.create({
-      xtype: loggedIn ? 'app-main' : 'login'
-    })
+    Ext.widget(loggedIn ? 'app-main' : 'login');
+    
   }
 });
