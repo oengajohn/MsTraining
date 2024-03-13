@@ -1,0 +1,63 @@
+{
+  "totalCount": 10,
+  "rows": [
+    {
+      "_id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "shanna@melissa.tv",
+      "street": "Victor Plains",
+      "suite": "Suite 879",
+      "city": "Wisokyburgh",
+      "zipcode": "90566-7771",
+      "lat": "-43.9509",
+      "lng": "-34.4618",
+      "phone": "010-692-6593 x09125",
+      "website": "anastasia.net",
+      "companyName": "Deckow-Crist",
+      "companyCatchPhrase": "Proactive didactic contingency",
+      "companyBs": "synergize scalable supply-chains",
+      "price":10000,
+      "__v": 0
+    },
+    {
+      "_id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "sincere@april.biz",
+      "street": "Kulas Light",
+      "suite": "Apt. 556",
+      "city": "Gwenborough",
+      "zipcode": "92998-3874",
+      "lat": "-37.3159",
+      "lng": "81.1496",
+      "phone": "1-770-736-8031 x56442",
+      "website": "hildegard.org",
+      "companyName": "Romaguera-Crona",
+      "companyCatchPhrase": "Multi-layered client-server neural-net",
+      "companyBs": "harness real-time e-markets",
+      "price": 10000000,
+      "__v": 0
+    },
+    {
+      "_id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "nathan@yesenia.net",
+      "street": "Douglas Extension",
+      "suite": "Suite 847",
+      "city": "McKenziehaven",
+      "zipcode": "59590-4157",
+      "lat": "-68.6102",
+      "lng": "-47.0653",
+      "phone": "1-463-123-4447",
+      "website": "ramiro.info",
+      "companyName": "Romaguera-Jacobson",
+      "companyCatchPhrase": "Face to face bifurcated interface",
+      "companyBs": "e-enable strategic applications",
+      "price": -8563475226,
+      "__v": 0
+    }
+  ],
+  "success": true
+}

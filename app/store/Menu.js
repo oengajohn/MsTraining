@@ -43,6 +43,20 @@ Ext.define('MsTraining.store.Menu',{
                 ]
 
             },
+             {
+                text: 'Review',
+                iconCls:'fa fa-database fa-lg',
+                children: [
+                    {
+                        text: 'Review Panel',
+                        iconCls: 'fa fa-users',
+                        className: 'reviewpanel',
+                        leaf: true
+                    }
+                   
+                ]
+
+            },
             
         ]
     }
