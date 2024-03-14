@@ -28,6 +28,7 @@ Ext.define('MsTraining.view.main.Main', {
         region: 'west',
         width: 250,
         split: true,
+        collapsible: true,
     },
     {
         region: 'center',
