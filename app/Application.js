@@ -8,6 +8,7 @@ Ext.define("MsTraining.Application", {
 
   name: "MsTraining",
 
+
   quickTips: false,
   platformConfig: {
     desktop: {

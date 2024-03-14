@@ -14,13 +14,12 @@ Ext.define('MsTraining.model.User', {
     ],
     proxy: {
         type: 'rest',
-        url: 'resources/user-order.json',
+        url: 'resources/users.json',
         reader: {
             type: 'json',
-          /*   rootProperty: 'rows',
-            totalProperty: 'totalCount' */
+            rootProperty: 'rows',
+            totalProperty: 'totalCount'
         }
     },
-    hasMany: 'MsTraining.model.Order'
     
 })
