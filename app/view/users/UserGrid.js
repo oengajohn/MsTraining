@@ -3,7 +3,6 @@ Ext.define('MsTraining.view.users.UserGrid', {
     xtype: 'usergrid',
     reference:'usergrid',
     controller: 'usergridcontroller',
-    title: 'Users',
     store: {
         type: 'users'
     },
