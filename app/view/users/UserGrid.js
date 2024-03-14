@@ -74,7 +74,8 @@ Ext.define('MsTraining.view.users.UserGrid', {
     listeners: {
         cellclick: 'onUserGridCellClick',
         celldblclick:'onUserGridCellDblClick',
-        cellcontextmenu:'onUserGridCellContextMenu'
+        cellcontextmenu:'onUserGridCellContextMenu',
+        selectuser:'onSelectUser'
     }
 
 })

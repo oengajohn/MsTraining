@@ -12,8 +12,44 @@ Ext.define('MsTraining.view.main.MainController', {
         'users|reviewpanel|mainlist|postgrid|todogrid': {
             action: 'onRoute',
             before: 'onBeforeRoute'
+        },
+        'users/:id': {
+            action: 'onUserSelect',
+            before: 'onBeforeUserSelect',
+            conditions: {
+                ':id': '([0-9]+)'
+            }
         }
     },
+    onUserSelect:function(id){
+        //fire an event to select the record on the user grid
+        this.getUserGrid().fireEvent('selectuser',id)
+    },
+    onBeforeUserSelect: function (id, action){
+        var me = this,
+            hash = 'users',
+            mainMenu = me.getMainMenu();
+        me.locateMenuItem(mainMenu, hash);
+
+        //get reference to grid
+        let grid = this.getUserGrid();
+
+        //get store
+        let store = grid.getStore()
+        //find record with the id
+        let record = store.findRecord('_id', id);
+        if(record){
+            action.resume()
+              
+        }else{
+            action.stop()
+        }
+       
+
+    }
+,
+
+
     onHomeRoute: function () {
         let mainPanel = this.getMainPanel();
         if (mainPanel) {
@@ -68,6 +104,9 @@ Ext.define('MsTraining.view.main.MainController', {
     },
     getMainPanel: function () {
         return Ext.ComponentQuery.query('mainpanel')[0];
+    },
+    getUserGrid: function () {
+        return Ext.ComponentQuery.query('usergrid')[0];
     },
     getMainMenu: function () {
         return Ext.ComponentQuery.query('mainmenu')[0];
