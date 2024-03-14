@@ -7,41 +7,34 @@ Ext.define('MsTraining.view.users.UserGridController', {
         store.load();
     },
     onUserGridCellClick: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts) {
-        let postsStore = Ext.ComponentQuery.query('postgrid')[0].getStore();
-        let todosStore = Ext.ComponentQuery.query('todogrid')[0].getStore();
-        postsStore.reload({
-            params: {
-                userId: record.get('_id')
-            }
-        });
-        todosStore.reload({
-            params: {
-                userId: record.get('_id')
-            }
-        })
+        let me = this,
+            view = me.getView(),
+            vm = me.getViewModel(),
+            refs = me.getReferences();
+        vm.set("record",record)
     },
-    onShowDetails:function(btn,e,eOpts){
+    onShowDetails: function (btn, e, eOpts) {
         let userGrid = this.getView();
-        let lowerPanel = Ext.ComponentQuery.query('staticdatamanagementtabpanel')[0];
-        if(userGrid.getHeight() === 800){
+        let lowerPanel = Ext.ComponentQuery.query('userdetailstab')[0];
+        if (userGrid.getHeight() === 600) {
             userGrid.setHeight(400)
             lowerPanel.setHeight(400)
             btn.setText("Hide Details")
-        }else{
-            userGrid.setHeight(800)
+        } else {
+            userGrid.setHeight(600)
             lowerPanel.setHeight(0)
             btn.setText("Show Details")
         }
     },
-    onModelBinding:function(btn,e,eOpts){
+    onModelBinding: function (btn, e, eOpts) {
         Ext.create({
-            xtype:'modelbindingform'
+            xtype: 'modelbindingform'
         })
     },
-    onUserGridCellDblClick:function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts){
+    onUserGridCellDblClick: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts) {
         console.log(record.get('username'));
     },
-    onUserGridCellContextMenu: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts){
-       
+    onUserGridCellContextMenu: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts) {
+
     }
 })
