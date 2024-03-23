@@ -1,6 +1,7 @@
-Ext.define('MsTraining.view.film.FilmsController',{
-    extend:'MsTraining.view.base.ViewController',
+Ext.define('MsTraining.view.film.FilmsController', {
+    extend: 'MsTraining.view.base.ViewController',
     alias: 'controller.films',
+    requires: ['MsTraining.ux.grid.Printer'],
     onFilmSelect: function (id) {
         var me = this,
             grid = me.lookupReference('filmsGrid'),
@@ -19,7 +20,7 @@ Ext.define('MsTraining.view.film.FilmsController',{
     createDialog: function (record) {
 
         var me = this,
-            view = me.getView();            
+            view = me.getView();
 
         me.isEdit = !!record;
         me.dialog = view.add({
@@ -27,7 +28,7 @@ Ext.define('MsTraining.view.film.FilmsController',{
             viewModel: {
                 data: {
                     title: record ? 'Edit: ' + record.get('title') : 'Add Film',
-                    iconCls: record ? 'fa fa-pencil-edit' :'add'
+                    iconCls: record ? 'fa fa-pencil-edit' : 'add'
                 },
                 links: {
                     currentFilm: record || {
@@ -62,7 +63,7 @@ Ext.define('MsTraining.view.film.FilmsController',{
         }
 
         me.viewSessionChanges();
-       
+
         var batch = session.getSaveBatch();
         if (batch) {
             batch.start();
@@ -107,7 +108,7 @@ Ext.define('MsTraining.view.film.FilmsController',{
     },
 
     onPrint: function (button, e, options) {
-        var printer = Packt.ux.grid.Printer;
+        var printer = MsTraining.ux.grid.Printer;
         printer.printAutomatically = false;
         printer.print(this.lookupReference('filmsGrid'));
     },
@@ -118,20 +119,23 @@ Ext.define('MsTraining.view.film.FilmsController',{
         var newTab = mainPanel.add({
             xtype: 'panel',
             closable: true,
-            glyph: Packt.util.Glyphs.getGlyph('pdf'),
             title: 'Films PDF',
             layout: 'fit',
             html: 'loading PDF...',
             items: [{
-                xtype: 'uxiframe',
-                src: 'php/pdf/exportFilmsPdf.php'
+                xtype: 'component',
+                autoEl: {
+                    tag: 'iframe',
+                    src: MsTraining.util.Util.baseUrl + '/report/exportFilmsPdf'
+                }
             }]
+
         });
 
         mainPanel.setActiveTab(newTab);
     },
 
     onExportExcel: function (button, e, options) {
-        window.open('php/pdf/exportFilmsExcel.php');
+        window.open(MsTraining.util.Util.baseUrl + '/report/exportFilmsExcel');
     }
 })

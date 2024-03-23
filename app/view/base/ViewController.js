@@ -87,7 +87,7 @@ Ext.define('MsTraining.view.base.ViewController', {
             batch.start(); 
         }
     },
-    /* viewSessionChanges: function () {
+    viewSessionChanges: function () {
         var changes = this.getView().getSession().getChanges();
         if (changes !== null) {
             new Ext.window.Window({
@@ -105,5 +105,5 @@ Ext.define('MsTraining.view.base.ViewController', {
         } else {
             Ext.Msg.alert('No Changes', 'There are no changes to the session.');
         }
-    } */
+    }
 });
