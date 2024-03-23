@@ -1,8 +1,9 @@
 Ext.define('MsTraining.model.staticdata.City', {
     extend: 'MsTraining.model.staticdata.Base',
     entityName: 'City',
+    idProperty: 'cityId',
     fields: [
-        { name: 'id' },
+        { name: 'cityId' },
         { name: 'city' },
         { name: 'countryId' },
         {

@@ -8,7 +8,7 @@ Ext.define('MsTraining.view.staticdata.CountriesGrid', {
         {
             text: 'Country Id',
             width: 100,
-            dataIndex: 'id',
+            dataIndex: 'countryId',
             xtype: 'numbercolumn',
             format: '0', 
             filter: {

@@ -11,5 +11,27 @@ Ext.define('MsTraining.view.base.TopToolBar', {
             listeners: {
                 click: 'onAdd'
             }
+        },
+        {
+            xtype: 'tbseparator'
+        },
+        {
+        
+            text: 'Print',
+            listeners: {
+                click: 'onPrint'
+            }
+        },
+        {
+            text: 'Export to PDF',
+            listeners: {
+                click: 'onExportPDF'
+            }
+        },
+        {
+            text: 'Export to Excel',
+            listeners: {
+                click: 'onExportExcel'
+            }
         }]
 });

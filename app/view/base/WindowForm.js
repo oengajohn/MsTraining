@@ -18,7 +18,7 @@ Ext.define('MsTraining.view.base.WindowForm', {
 
     bind: {
         title: '{title}',
-        glyph: '{glyph}'
+        iconCls: '{iconCls}'
     },
 
     //items must be overrriden in subclass

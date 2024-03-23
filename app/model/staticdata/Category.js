@@ -1,8 +1,9 @@
 Ext.define('MsTraining.model.staticdata.Category', {
     extend: 'MsTraining.model.staticdata.Base',
     entityName: 'Category',
+    idProperty: 'categoryId',
     fields: [
-        { name: 'id' },
+        { name: 'categoryId' },
         { name: 'name' },
     ],
     manyToMany: {

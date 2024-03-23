@@ -1,8 +1,9 @@
 Ext.define('MsTraining.model.staticdata.Actor', {
     extend: 'MsTraining.model.staticdata.Base',
     entityName: 'Actor',
+    idProperty: 'actorId',
     fields: [
-        { name: 'id', type: 'int', defaultValue:null },
+        { name: 'actorId', type: 'int', defaultValue:null },
         { name: 'firstName' },
         { name: 'lastName' }
     ],
@@ -24,9 +25,9 @@ Ext.define('MsTraining.model.staticdata.Actor', {
         ActorFilms: {
             type: 'Film',
             role: 'films',
-            field: 'id',
+            field: 'filmId',
             right: {
-                field: 'id',
+                field: 'actorId',
                 role: 'actors'
             }
         }

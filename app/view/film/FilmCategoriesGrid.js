@@ -9,7 +9,7 @@ Ext.define('MsTraining.view.film.FilmCategoriesGrid', {
         {
             text: 'Category Id',
             width: 100,
-            dataIndex: 'id'
+            dataIndex: 'categoryId'
         },
         {
             text: 'Category Name',

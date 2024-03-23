@@ -8,7 +8,7 @@ Ext.define('MsTraining.view.staticdata.CategoriesGrid', {
         {
             text: 'Category Id',
             width: 100,
-            dataIndex: 'id',
+            dataIndex: 'categoryId',
             xtype: 'numbercolumn',
             format: '0', 
             filter: {

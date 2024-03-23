@@ -8,7 +8,7 @@ Ext.define('MsTraining.view.staticdata.Actors', {
         {
             text: 'Actor Id',
             width: 100,
-            dataIndex: 'id',
+            dataIndex: 'actorId',
             format: '0', 
             filter: {
                 type: 'numeric'

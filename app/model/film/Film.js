@@ -1,8 +1,9 @@
 Ext.define('MsTraining.model.film.Film', {
     extend: 'MsTraining.model.staticdata.Base',
     entityName: 'Film',
+    idProperty:'filmId',
     fields: [
-        { name: 'id' },
+        { name: 'filmId' },
         { name: 'title' },
         { name: 'description' },
         { name: 'releaseYear', type: 'int' },
@@ -19,9 +20,9 @@ Ext.define('MsTraining.model.film.Film', {
         FilmCategories: { 
             type: 'Category',
             role: 'categories', 
-            field: 'id', 
+            field: 'categoryId', 
             right: {
-                field: 'id', 
+                field: 'filmId', 
                 role: 'films' 
             }
         },

@@ -16,7 +16,7 @@ Ext.define('MsTraining.view.film.FilmsGrid', {
     columns: [{
         text: 'Film Id',
         width: 80,
-        dataIndex: 'id'
+        dataIndex: 'filmId'
     },
     {
         text: 'Title',

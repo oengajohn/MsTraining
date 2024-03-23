@@ -8,7 +8,7 @@ Ext.define('MsTraining.view.staticdata.LanguagesGrid', {
         {
             text: 'Category Id',
             width: 100,
-            dataIndex: 'id',
+            dataIndex: 'languageId',
             xtype: 'numbercolumn',
             format: '0', 
             filter: {

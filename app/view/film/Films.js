@@ -3,7 +3,8 @@ Ext.define('MsTraining.view.film.Films', {
     xtype: 'films',
     requires: [
         
-    ], controller: 'films', 
+    ], 
+    controller: 'films', 
     viewModel: {
         type: 'films' 
     },

@@ -9,7 +9,7 @@ Ext.define('MsTraining.view.film.FilmActorsGrid', {
         {
             text: 'Actor Id',
             width: 80,
-            dataIndex: 'id'
+            dataIndex: 'actorId'
         },
         {
             xtype: 'templatecolumn',

@@ -8,13 +8,18 @@ Ext.define('MsTraining.view.film.FilmsModel', {
             autoLoad: true,
             session: true
         },
+        languages: {
+            type:'languages',
+            autoLoad: true,
+            storeId: 'languages'
+        },
         categories: {
-            source: 'categories',
+            type: 'categories',
             autoLoad: true,
             session: true
         },
         actors: {
-            source: 'actors',
+            type: 'actors',
             autoLoad: true,
             session: true
         },

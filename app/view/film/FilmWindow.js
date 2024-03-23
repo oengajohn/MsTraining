@@ -7,6 +7,7 @@ Ext.define('MsTraining.view.film.FilmWindow', {
         'MsTraining.view.film.FilmFormCategories'
     ],
     width: 537,
+    modal: true,
     items: [
         {
             xtype: 'form',
@@ -19,11 +20,13 @@ Ext.define('MsTraining.view.film.FilmWindow', {
                 activeTab: 0,
                 items: [{
                     xtype: 'film-form-container',
-                    iconCls:'fas fa-film'
-                }, {
+                    iconCls: 'fas fa-film'
+                },
+                {
                     xtype: 'film-categories-form',
-                    iconCls:'fas fa-sun',
-                }, {
+                    iconCls: 'fas fa-sun',
+                },
+                {
                     xtype: 'film-actors',
                     reference: 'actorsGrid',
                     dockedItems: [{

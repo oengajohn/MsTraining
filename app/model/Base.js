@@ -1,7 +1,8 @@
 Ext.define('MsTraining.model.Base', {
     extend: 'Ext.data.Model',
     requires: [
-        'MsTraining.util.Util'
+        'MsTraining.util.Util',
+        'MsTraining.ux.data.writer.AssociatedWriter'
     ],
     schema: {
         namespace: 'MsTraining.model.security',
@@ -23,18 +24,20 @@ Ext.define('MsTraining.model.Base', {
             },
             reader: {
                 type: 'json',
-                rootProperty: 'data'
+                rootProperty: 'data',
+                totalProperty:'totalCount'
             },
             headers: {
                 'Content-Type': 'application/json'
             },
              writer: {
-                type: 'json',
+                 type: 'associatedjson',
                 writeAllFields: true,
                 // encode: true,
                 // rootProperty: 'data',
                 allowSingle: false
             }, 
+
             listeners: {
                 exception: function (proxy, response, operation) {
                     MsTraining.util.Util.showErrorMsg(response.responseJson.msg);

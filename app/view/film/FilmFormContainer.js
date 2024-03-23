@@ -36,7 +36,9 @@ Ext.define('MsTraining.view.film.FilmFormContainer', {
             displayField: 'name',
             valueField: 'languageId',
             queryMode: 'local',
-            store: 'staticData.Languages',
+            store: {
+                type: 'languages'
+            },
             afterLabelTextTpl: MsTraining.util.Util.required,
             bind: '{currentFilm.languageId}'
         },
@@ -46,7 +48,9 @@ Ext.define('MsTraining.view.film.FilmFormContainer', {
             displayField: 'name',
             valueField: 'languageId',
             queryMode: 'local',
-            store: 'staticData.Languages',
+            store: {
+                type:'languages'
+            },
             bind: '{currentFilm.originalLanguageId}'
         },
         {
